@@ -1,0 +1,2 @@
+PROJECT_PATH=$HOME/Projetos/Arousal
+export LD_LIBRARY_PATH=$PROJECT_PATH/lib
