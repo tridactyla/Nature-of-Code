@@ -26,20 +26,8 @@ void noc_walker_display(walker_type_t *walker) {
 }
 
 void noc_walker_step(walker_type_t *walker) {
-  int choice = util_random_get_number_by_interval(4);
-
-  switch(choice) {
-    case 0:
-      walker->x++;
-      break;
-    case 1:
-      walker->x--;
-      break;
-    case 2:
-      walker->y++;
-      break;
-    default:
-      walker->y--;
-      break;
-  }
+  int step_x = GetRandomValue(-1, 1);
+  int step_y = GetRandomValue(-1, 1);
+  walker->x += step_x;
+  walker->y += step_y;
 }
