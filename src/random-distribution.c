@@ -27,4 +27,5 @@ void noc_random_distribution_start() {
     graphics_core_draw_end();
   }
 
+  graphics_core_terminate();
 }

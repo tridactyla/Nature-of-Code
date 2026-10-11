@@ -18,3 +18,7 @@ void graphics_core_draw_begin(const bool should_clear) {
 void graphics_core_draw_end() {
   EndDrawing();
 }
+
+void graphics_core_terminate() {
+  CloseWindow();  
+}

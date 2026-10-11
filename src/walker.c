@@ -46,4 +46,6 @@ void noc_walker_start() {
 
     graphics_core_draw_end();
   }
+  
+  graphics_core_terminate();
 }
