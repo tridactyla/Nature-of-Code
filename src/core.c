@@ -10,8 +10,9 @@ bool graphics_core_handle_window() {
   return !WindowShouldClose();
 }
 
-void graphics_core_draw_begin() {
+void graphics_core_draw_begin(const bool should_clear) {
   BeginDrawing();
+  if(should_clear) ClearBackground(RAYWHITE);
 }
 
 void graphics_core_draw_end() {

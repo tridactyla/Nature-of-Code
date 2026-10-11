@@ -24,6 +24,7 @@ $(BIN_DIR) $(OBJ_DIR):
 	mkdir -p $@
 
 run: all
+	clear
 	./$(TARGET)
 
 clean:

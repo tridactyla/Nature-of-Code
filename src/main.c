@@ -10,7 +10,7 @@ int main() {
   printf("Input your choice > ");
   scanf("%i", &choice);
   if(choice == 0) {
-    printf("Choose your example:\n[1] Random Walker\n");  
+    printf("Choose your example:\n[1] Random Walker\n[2] Random Distribution\n");  
   }
   printf("Input your choice > ");
   scanf("%i", &choice);

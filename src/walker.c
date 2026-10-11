@@ -39,7 +39,7 @@ void noc_walker_start() {
   walker_type_t walker = walker_create(window.width, window.height);
 
   while(graphics_core_handle_window()) {
-    graphics_core_draw_begin();
+    graphics_core_draw_begin(false);
     
     walker_display(&walker);
     walker_step(&walker);
