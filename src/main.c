@@ -5,7 +5,7 @@
 
 int main() {
   util_random_define_seed();
-  printf("Welcome to Nature Of Code codes!\nPlease select your experience:\n[0] Introduction\n");
+  printf("Welcome to Nature of Code examples in C!\nPlease select your experience:\n[0] Introduction\n");
   int choice = 0;
   printf("Input your choice > ");
   scanf("%i", &choice);
