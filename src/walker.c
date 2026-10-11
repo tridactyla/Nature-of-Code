@@ -32,7 +32,30 @@ static void walker_step(walker_type_t *walker) {
   walker->y += step_y;
 }
 
-void noc_walker_start() {
+static void walker_random(walker_type_t *walker) {
+    walker_display(walker);
+    walker_step(walker);
+}
+
+static void walker_step_tend_to_right(walker_type_t *walker) {
+  int choice = util_random_get_number_by_interval(10);
+  if(choice < 4) {
+    walker->x++;
+  } else if(choice < 6) {
+    walker->x--;
+  } else if(choice < 8) {
+    walker->y++;
+  } else {
+    walker->y--;
+  }
+}
+
+static void walker_tends_to_right(walker_type_t *walker) {
+  walker_display(walker);
+  walker_step_tend_to_right(walker);
+}
+
+void noc_walker_start(const int walker_type) {
   window_type_t window = get_window();
   graphics_core_setup_with_window(&window);
   
@@ -41,8 +64,8 @@ void noc_walker_start() {
   while(graphics_core_handle_window()) {
     graphics_core_draw_begin(false);
     
-    walker_display(&walker);
-    walker_step(&walker);
+    if(walker_type == 1) walker_random(&walker);
+    if(walker_type == 2) walker_tends_to_right(&walker);
 
     graphics_core_draw_end();
   }

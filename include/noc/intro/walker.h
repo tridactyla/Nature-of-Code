@@ -6,6 +6,6 @@ typedef struct walker_type_t {
   int y;
 } walker_type_t;
 
-void noc_walker_start();
+void noc_walker_start(const int walker_type);
 
 #endif // NOC_INTRODUCTION_WALK_H
