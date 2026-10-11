@@ -1,5 +1,5 @@
-#include <noc/introduction/walker.h>
-#include <noc/introduction/random-distribution.h>
+#include <noc/intro/walker.h>
+#include <noc/intro/random-distribution.h>
 #include <util/random.h>
 #include <stdio.h>
 

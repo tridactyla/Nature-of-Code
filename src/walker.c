@@ -1,4 +1,4 @@
-#include <noc/introduction/walker.h>
+#include <noc/intro/walker.h>
 #include <graphics/core.h>
 #include <util/random.h>
 #include <graphics/point.h>

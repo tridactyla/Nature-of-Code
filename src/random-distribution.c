@@ -1,4 +1,4 @@
-#include <noc/introduction/random-distribution.h>
+#include <noc/intro/random-distribution.h>
 #include <graphics/core.h>
 
 static window_type_t get_window() {
