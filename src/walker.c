@@ -55,6 +55,36 @@ static void walker_tends_to_right(walker_type_t *walker) {
   walker_step_tend_to_right(walker);
 }
 
+static void walker_step_tends_to_mouse(walker_type_t *walker) {
+  Vector2 mouse = GetMousePosition();
+  int choice = util_random_get_number_by_interval(20);
+  if(choice < 10) {
+    if(walker->x < mouse.x) {
+      walker->x++;
+    } else {
+      walker->x--;
+    }
+    if(walker->y < mouse.y) {
+      walker->y++;
+    } else {
+      walker->y--;
+    }
+  } else if(choice < 12) {
+    walker->x++;
+  } else if(choice < 14) {
+    walker->x--;
+  } else if(choice < 17) {
+    walker->y++;
+  } else if(choice < 20) {
+    walker->y--;
+  }
+}
+
+static void walker_tends_to_mouse(walker_type_t *walker) {
+  walker_display(walker);
+  walker_step_tends_to_mouse(walker);
+}
+
 void noc_walker_start(const int walker_type) {
   window_type_t window = get_window();
   graphics_core_setup_with_window(&window);
@@ -66,6 +96,7 @@ void noc_walker_start(const int walker_type) {
     
     if(walker_type == 1) walker_random(&walker);
     if(walker_type == 2) walker_tends_to_right(&walker);
+    if(walker_type == 3) walker_tends_to_mouse(&walker);
 
     graphics_core_draw_end();
   }

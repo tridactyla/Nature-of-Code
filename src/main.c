@@ -10,7 +10,7 @@ int main() {
   printf("Input your choice > ");
   scanf("%i", &choice);
   if(choice == 0) {
-    printf("Choose your example:\n[1] Random Walker\n[2] Random Distribution\n[3] Walker Tends to Right\n"); 
+    printf("Choose your example:\n[1] Random Walker\n[2] Random Distribution\n[3] Walker Tends to Right\n[4] Walker Tends to Mouse\n"); 
   }
   printf("Input your choice > ");
   scanf("%i", &choice);
@@ -20,5 +20,7 @@ int main() {
     noc_random_distribution_start();
   } else if(choice == 3) {
     noc_walker_start(2);
+  } else if(choice == 4) {
+    noc_walker_start(3);
   }
 }
