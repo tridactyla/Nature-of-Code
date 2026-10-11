@@ -1,4 +1,5 @@
 #include <noc/introduction/walker.h>
+#include <noc/introduction/random-distribution.h>
 #include <util/random.h>
 #include <stdio.h>
 
@@ -16,6 +17,6 @@ int main() {
   if(choice == 1) {
     noc_walker_start();
   } else if(choice == 2) {
-    printf("Random distribution\n");
+    noc_random_distribution_start();
   }
 }
